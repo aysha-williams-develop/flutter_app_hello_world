@@ -1,11 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_app_hello_world/main.dart' as hello_world;
+import 'package:flutter_app_hello_world/main.dart';
 
 void main() {
   testWidgets('Hello world smoke test', (WidgetTester tester) async {
-    hello_world.main(); // builds the app and schedules a frame but doesn't trigger one
-    await tester.pump(); // triggers a frame
-
+    await tester.pumpWidget(MyApp());
     expect(find.text('Hello, world!'), findsOneWidget);
   });
 }
