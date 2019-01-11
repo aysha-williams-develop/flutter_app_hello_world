@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(new MyApp());
+//void main() => runApp(new MyApp());
+
+void main() =>
+    runApp(MaterialApp(
+    title: 'My app', // used by the OS task switcher
+    home: MyApp(),
+  ));
 
 class MyApp extends StatelessWidget {
+//Don't need this if using MaterialApp, instead, pass title to MaterialApp's
+//constructor
+//  MyApp({this.title});
 
-  MyApp({this.title});
-
-  final Widget title;
+//  final Widget title;
 
   @override
   Widget build(BuildContext context) {
