@@ -1,22 +1,34 @@
 import 'package:flutter/material.dart';
 
-//void main() => runApp(new MyApp());
-
 void main() =>
     runApp(MaterialApp(
-    title: 'My app', // used by the OS task switcher
+    title: 'Material Widget', // used by the OS task switcher
     home: MyApp(),
   ));
 
 class MyApp extends StatelessWidget {
-//Don't need this if using MaterialApp, instead, pass title to MaterialApp's
-//constructor
-//  MyApp({this.title});
-
-//  final Widget title;
-
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My super awesome appbar"),
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          tooltip: "Navigation menu",
+          onPressed: null,
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.search),
+            tooltip: 'Search',
+            onPressed: null,
+          ),
+        ],
+      ),
+
+    );
+
+
     return Container(
       height: 56.0, // in logical pixels
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
