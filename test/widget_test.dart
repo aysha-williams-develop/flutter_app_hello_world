@@ -8,4 +8,9 @@ void main() {
 //    Finds the exact text "Hello, world!"
     expect(find.text('Hello, world!'), findsOneWidget);
   });
+
+  testWidgets('Prints a message when tapped', (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp(title: 'test', home: MyApp()));
+    await tester.tap(find.byKey(Key('myButton')));
+  });
 }
