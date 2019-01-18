@@ -25,12 +25,14 @@ class MyApp extends StatelessWidget {
           ),
           IconButton(
             icon: Icon(Icons.adb),
-            tooltip: 'Search',
+            tooltip: 'Bugs!',
             onPressed: null,
           ),
         ],
       ),
-
+      body: Center(
+        child: Text("Hello, world!")
+      )
     );
   }
 }
