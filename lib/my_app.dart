@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_app_hello_world/my_button.dart';
 
 class MyApp extends StatelessWidget {
@@ -26,8 +27,10 @@ class MyApp extends StatelessWidget {
           ],
         ),
         body: Center(
-          child: PageView(
+          child: ListView(
             key: Key("mainBody"),
+            //itemExtent seems to determine the width of each Widget
+            itemExtent: 45,
             children: <Widget>[
               Center( child: Text("Hello, world!") ),
               Center( child: MyButton() ) ,
